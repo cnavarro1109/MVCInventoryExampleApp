@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using InventoryApp.Models;
 
 namespace InventoryApp.Controllers
 {
@@ -40,6 +41,11 @@ namespace InventoryApp.Controllers
 
 
             //Filtering our values
+            //IQueryable<Store> Results = db.Stores;
+
+            //We need to cast it as IQueryable to be able to filter the values
+            //var Results = (IQueryable<Store>)db.Stores;
+
             var Results = (from A in db.Stores
                            join B in db.Employees
                            on A.EmployeeID equals B.Id
