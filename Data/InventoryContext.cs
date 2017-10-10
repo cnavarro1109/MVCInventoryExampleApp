@@ -11,6 +11,10 @@ namespace InventoryApp.Data
     {
         public InventoryContext() : base("DefaultConnection") { }
 
+        public DbSet<Store> Stores { get; set; }
         public DbSet<Inventory> Inventories { get; set; }
+
+        public DbSet<Employee> Employees { get; set; }
+
     }
 }
