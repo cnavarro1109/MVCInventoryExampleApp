@@ -58,6 +58,7 @@ namespace InventoryApp.Controllers
                                LastName = B.LastName
                            });
 
+            
 
             //Checking to see what sort category we are going to choose from
             switch (sortOrder)

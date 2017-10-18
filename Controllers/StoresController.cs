@@ -45,22 +45,55 @@ namespace InventoryApp.Controllers
             return View();
         }
 
+        //// POST: Stores/Create
+        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "Id,Name,Description,IsActive,OpenDate,EmployeeID")] Store store)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.Stores.Add(store);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    return View(store);
+        //}
+
         // POST: Stores/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Name,Description,IsActive,OpenDate,EmployeeID")] Store store)
+        public ActionResult CreateAjax([Bind(Include = "Id,Name,Description,IsActive,OpenDate,EmployeeID")] Store store)
         {
             if (ModelState.IsValid)
             {
                 db.Stores.Add(store);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                return this.Json(new
+                {
+                    EnableSuccess = true,
+                    SuccessTitle = "Success",
+                    SuccessMsg = "Success"
+                });
+            }
+            else
+            {
+                return this.Json(new
+                {
+                    EnableError = true,
+                    ErrorTitle = "Error",
+                    ErrorMsg = "Something goes wrong, please try again later"
+                });
             }
 
-            return View(store);
         }
+
+
 
         // GET: Stores/Edit/5
         public ActionResult Edit(int? id)
