@@ -22,8 +22,10 @@
             error: function (jqXHR, textStatus, errorThrown) {
                 //do your own thing  
                 alert("fail");
+                
             }
         });
+
     }); //end .submit()  
 });
 
@@ -33,7 +35,9 @@ var onAjaxRequestSuccess = function (result) {
         alert(result.ErrorMsg);
     } else if (result.EnableSuccess) {
         // Setting.  
-        alert(result.SuccessMsg);
+        $("#StatusMessage").show();
+        $("#StatusMessage").html(result.SuccessMsg);
+        //alert(result.SuccessMsg);
         // Resetting form.  
         $('#AjaxformId').get(0).reset();
     }

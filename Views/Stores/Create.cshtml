@@ -7,6 +7,8 @@
 
 <h2>Create</h2>
 
+<div class="alert alert-success" role="alert" style="display:none;"  id="StatusMessage"></div>
+
 
 @*@using (Html.BeginForm())*@ 
 @using (Ajax.BeginForm("CreateAjax", "Stores", new AjaxOptions { HttpMethod = "POST", OnSuccess = "onAjaxRequestSuccess" }, 
