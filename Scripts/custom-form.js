@@ -37,6 +37,7 @@ var onAjaxRequestSuccess = function (result) {
         // Setting.  
         $("#StatusMessage").show();
         $("#StatusMessage").html(result.SuccessMsg);
+        $("#StatusMessage").delay(1500).slideUp("slow");
         //alert(result.SuccessMsg);
         // Resetting form.  
         $('#AjaxformId').get(0).reset();
