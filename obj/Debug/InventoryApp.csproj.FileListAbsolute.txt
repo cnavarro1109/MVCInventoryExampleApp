@@ -87,3 +87,4 @@ C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryAp
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.dll
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.pdb
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.csprojResolveAssemblyReference.cache
+C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Migrations.AddedRating.resources

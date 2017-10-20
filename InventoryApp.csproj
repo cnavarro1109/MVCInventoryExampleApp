@@ -214,6 +214,10 @@
     <Compile Include="Migrations\201710020327091_AddedIsActiveEmployee.Designer.cs">
       <DependentUpon>201710020327091_AddedIsActiveEmployee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201710200044564_AddedRating.cs" />
+    <Compile Include="Migrations\201710200044564_AddedRating.Designer.cs">
+      <DependentUpon>201710200044564_AddedRating.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Inventory.cs" />
@@ -434,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710020327091_AddedIsActiveEmployee.resx">
       <DependentUpon>201710020327091_AddedIsActiveEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201710200044564_AddedRating.resx">
+      <DependentUpon>201710200044564_AddedRating.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

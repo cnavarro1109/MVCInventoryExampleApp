@@ -24,6 +24,9 @@
         <th>
             @Html.DisplayNameFor(model => model.OpenDate)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Rating)
+        </th>
         <th></th>
     </tr>
 
@@ -42,6 +45,11 @@
             @Html.DisplayFor(modelItem => item.OpenDate)
         </td>
         <td>
+            <span class="stars">
+                @Html.DisplayFor(modelItem => item.Rating)
+            </span>             
+        </td>
+        <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
@@ -50,3 +58,35 @@
 }
 
 </table>
+
+
+
+@section Scripts {
+
+    <script type="text/javascript">
+        
+        $(document).ready(function () {
+            $('span.stars').stars();
+        });
+       
+            $.fn.stars = function () {
+                return $(this).each(function () {
+
+                    //Show the value in the console
+                    //$(this) equals to the element span.stars
+                    //html() is the value inside the span which is a numerical value |rating|
+                    console.log($(this).html());
+
+                    // Get the value
+                    var val = parseFloat($(this).html());
+                    // Make sure that the value is in 0 - 5 range, multiply to get width
+                    var size = Math.max(0, (Math.min(5, val))) * 16;
+                    // Create stars holder
+                    var $span = $('<span />').width(size);
+                    // Replace the numerical value with stars
+                    $(this).html($span);
+                });
+            }
+    </script>
+
+}

@@ -22,6 +22,8 @@ namespace InventoryApp.Models
 
         public int EmployeeID { get; set; }
 
+        public int Rating { get; set; }
+
         //Set the ForeignKey
         [ForeignKey("EmployeeID")]
         public virtual Employee employee { get; set; }
