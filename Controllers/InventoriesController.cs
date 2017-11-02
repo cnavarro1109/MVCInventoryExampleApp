@@ -31,9 +31,19 @@ namespace InventoryApp.Controllers
             //}
             #endregion
 
-            ViewBag.StoreId = storeId; //We need to hold the storeId
-            //return View(db.Inventories.Where(x => x.IsActive == true).ToList());
-            return View(db.Inventories.Where(x => x.Stores.Id == storeId).ToList());
+            if (storeId > 0)
+            {
+                //If there is a storeId provided, then we can use it to filter out the iventory list.
+
+                ViewBag.StoreId = storeId; //We need to hold the storeId
+                                           //return View(db.Inventories.Where(x => x.IsActive == true).ToList());
+                return View(db.Inventories.Where(x => x.Stores.Id == storeId).ToList());
+            }
+            else
+            {
+                //If no storeId is provided, we display all inventory
+                return View(db.Inventories.ToList());
+            }
 
         }
 
@@ -76,15 +86,33 @@ namespace InventoryApp.Controllers
         {
             if (ModelState.IsValid)
             {
+                try
+                {
+                    //Assign the store information to the inventory object
+                    inventory.Stores = db.Stores.Where(x => x.Id == inventory.Stores.Id).FirstOrDefault();
 
-                //Assign the store information to the inventory object
-                inventory.Stores = db.Stores.Where(x => x.Id == inventory.Stores.Id).FirstOrDefault();
-
-                db.Inventories.Add(inventory);
-                db.SaveChanges();
+                    db.Inventories.Add(inventory);
+                    db.SaveChanges();
 
 
-                return RedirectToAction("Index", new { storeId = inventory.Stores.Id });
+                    return this.Json(new
+                    {
+                        EnableSuccess = true,
+                        SuccessTitle = "Success",
+                        SuccessMsg = "Success"
+                    });
+
+                    //return RedirectToAction("Index", new { storeId = inventory.Stores.Id });
+                }
+                catch
+                {
+                    return this.Json(new
+                    {
+                        EnableError = true,
+                        ErrorTitle = "Error",
+                        ErrorMsg = "Something goes wrong, please try again later"
+                    });
+                }
             }
 
             return View(inventory);

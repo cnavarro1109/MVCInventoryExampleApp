@@ -8,6 +8,8 @@ using System.Web;
 using System.Web.Mvc;
 using InventoryApp.Data;
 using InventoryApp.Models;
+using InventoryApp.ViewModels;
+using System.Threading.Tasks;
 
 namespace InventoryApp.Controllers
 {
@@ -24,16 +26,30 @@ namespace InventoryApp.Controllers
         // GET: Stores/Details/5
         public ActionResult Details(int? id)
         {
+            //Create an instance of the EmployeesDetaislViewModel
+            EmployeesDetailsViewModel model = new EmployeesDetailsViewModel();
+
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Store store = db.Stores.Find(id);
-            if (store == null)
+
+            //Store store = db.Stores.Find(id);
+            model.Store = db.Stores.Find(id); //Find stores
+            model.Inventories = db.Inventories.Where(x => x.Stores.Id == id).ToList(); //Find all inventories for a store
+
+            if (model.Store == null)
             {
                 return HttpNotFound();
             }
-            return View(store);
+            return View(model);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult> GetPartialView(int Id)
+        {
+            var model = db.Inventories.Where(x => x.Stores.Id == Id).ToList(); //Find all inventories for a store
+            return PartialView("_InventoryList", model);
         }
 
         // GET: Stores/Create
@@ -45,6 +61,7 @@ namespace InventoryApp.Controllers
             return View();
         }
 
+#region oldArea
         //// POST: Stores/Create
         //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         //// more details see https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -61,6 +78,7 @@ namespace InventoryApp.Controllers
 
         //    return View(store);
         //}
+#endregion
 
         // POST: Stores/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -171,5 +189,7 @@ namespace InventoryApp.Controllers
             //Index is the ActionResult, Inventories is the Controller, StoreId is the URL Parameter
             return RedirectToAction("Index", "Inventories", new { storeId = id });
         }
+
+
     }
 }

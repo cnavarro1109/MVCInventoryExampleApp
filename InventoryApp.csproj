@@ -223,6 +223,7 @@
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\EmployeesDetailsViewModel.cs" />
     <Compile Include="ViewModels\StoreManagementViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -392,6 +393,8 @@
     <Content Include="Views\Employees\Edit.cshtml" />
     <Content Include="Views\Employees\Index.cshtml" />
     <Content Include="Views\StoreManagement\Index.cshtml" />
+    <Content Include="Views\Shared\_EmployeesList.cshtml" />
+    <Content Include="Views\Shared\_InventoryList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

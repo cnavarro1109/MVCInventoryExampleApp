@@ -8,7 +8,8 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Ajax.BeginForm("Create", "Inventory", new AjaxOptions { HttpMethod = "POST", OnSuccess = "onAjaxRequestSuccess" },
+                                                                    new { @id = "AjaxformId", @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
     
@@ -67,6 +68,56 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
+<div id="PartialRender"></div>
+
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+
+        //When the page loads. We will call LoadData
+        LoadData();
+
+        /*
+        When the form AjaxFormId is submitted, we will call the function LoadData.
+        */
+        $("#AjaxformId").submit(function (event) {
+            var dataString;
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            var action = $("#AjaxformId").attr("action");
+            // Setting.  
+            dataString = new FormData($("#AjaxformId").get(0));
+            contentType = false;
+            processData = false;
+            $.ajax({
+                type: "POST",
+                url: action,
+                data: dataString,
+                dataType: "json",
+                contentType: contentType,
+                processData: processData,
+                success: function (result) {
+                    // Result.  
+                    LoadData(); //Load the partial view if the request is successful
+                   
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    //do your own thing  
+                    alert("fail");
+                }
+            });
+
+        }); //end .submit()  
+
+        function LoadData() {
+            $("#PartialRender").load(
+                '@(Url.Action("GetPartialView", "Stores",null, Request.Url.Scheme))?Id=' + @Model.Stores.Id
+         );
+        }
+    });
+   
+    </script>
 }
