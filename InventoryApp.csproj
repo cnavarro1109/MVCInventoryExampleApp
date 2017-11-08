@@ -222,10 +222,19 @@
     <Compile Include="Migrations\201710200044564_AddedRating.Designer.cs">
       <DependentUpon>201710200044564_AddedRating.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201711080210469_AddedCategoriesTable.cs" />
+    <Compile Include="Migrations\201711080210469_AddedCategoriesTable.Designer.cs">
+      <DependentUpon>201711080210469_AddedCategoriesTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201711080213445_AddingForeignKeyToStoreTable.cs" />
+    <Compile Include="Migrations\201711080213445_AddingForeignKeyToStoreTable.Designer.cs">
+      <DependentUpon>201711080213445_AddingForeignKeyToStoreTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Inventory.cs" />
     <Compile Include="Models\Store.cs" />
+    <Compile Include="Models\StoreCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\EmployeesDetailsViewModel.cs" />
     <Compile Include="ViewModels\StoreManagementViewModel.cs" />
@@ -451,6 +460,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201710200044564_AddedRating.resx">
       <DependentUpon>201710200044564_AddedRating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080210469_AddedCategoriesTable.resx">
+      <DependentUpon>201711080210469_AddedCategoriesTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201711080213445_AddingForeignKeyToStoreTable.resx">
+      <DependentUpon>201711080213445_AddingForeignKeyToStoreTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

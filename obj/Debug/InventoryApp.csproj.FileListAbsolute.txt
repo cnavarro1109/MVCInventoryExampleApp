@@ -31,6 +31,7 @@ C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryAp
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\Antlr3.Runtime.dll
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\EntityFramework.dll
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\EntityFramework.SqlServer.dll
+C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\JQueryUIHelpers.dll
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\Microsoft.AI.DependencyCollector.dll
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -53,6 +54,7 @@ C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryAp
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\WebGrease.dll
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\EntityFramework.xml
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\EntityFramework.SqlServer.xml
+C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\JQueryUIHelpers.xml
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\PagedList.xml
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\PagedList.Mvc.xml
@@ -83,10 +85,9 @@ C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryAp
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Migrations.ForeignkeybetweenstoreandEmployee.resources
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Migrations.FixingField.resources
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Migrations.AddedIsActiveEmployee.resources
+C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Migrations.AddedRating.resources
+C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Migrations.AddedCategoriesTable.resources
+C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Migrations.AddingForeignKeyToStoreTable.resources
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.csproj.GenerateResource.Cache
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.dll
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.pdb
-C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.csprojResolveAssemblyReference.cache
-C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Migrations.AddedRating.resources
-C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\JQueryUIHelpers.dll
-C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\JQueryUIHelpers.xml

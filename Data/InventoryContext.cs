@@ -16,5 +16,8 @@ namespace InventoryApp.Data
 
         public DbSet<Employee> Employees { get; set; }
 
+        //Inventory Table to assign to each store individually
+        public DbSet<StoreCategory> Categories { get; set; }
+
     }
 }
