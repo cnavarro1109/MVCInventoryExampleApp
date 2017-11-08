@@ -13,7 +13,7 @@ namespace InventoryApp.Controllers
 {
     public class EmployeesController : Controller
     {
-        private InventoryContext db = new InventoryContext();
+        private InventoryContext db = new InventoryContext(); 
 
         // GET: Employees
         public ActionResult Index()

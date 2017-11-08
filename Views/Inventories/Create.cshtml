@@ -102,7 +102,9 @@
                 success: function (result) {
                     // Result.  
                     LoadData(); //Load the partial view if the request is successful
-                   
+ 
+                    $("#AjaxformId").find("input[type=text], textarea, input[type=number]").val("");
+                    
                 },
                 error: function (jqXHR, textStatus, errorThrown) {
                     //do your own thing  

@@ -36,6 +36,19 @@ namespace InventoryApp
                 "~/Scripts/jquery.unobtrusive-ajax.js", 
                 "~/Scripts/jquery.validate*", 
                 "~/Scripts/jquery.validate.unobtrusive.js"));
+
+            //Jquery-UI
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+            "~/Scripts/jquery-ui-{version}.js",
+            "~/Scripts/jquery-ui.unobtrusive-{version}.js"));
+
+            //Theme-Base
+            bundles.Add(new StyleBundle("~/Content/themes/base/css").Include(
+            "~/Content/themes/base/jquery.ui.core.css",
+            "~/Content/themes/base/jquery.ui.datepicker.css",
+            "~/Content/themes/base/jquery.ui.theme.css"));
+
+
         }
     }
 }
