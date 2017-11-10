@@ -8,6 +8,7 @@ namespace InventoryApp
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
         {
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/jquery-ui-{version}.js",
@@ -47,7 +48,6 @@ namespace InventoryApp
             "~/Content/themes/base/jquery.ui.core.css",
             "~/Content/themes/base/jquery.ui.datepicker.css",
             "~/Content/themes/base/jquery.ui.theme.css"));
-
 
         }
     }

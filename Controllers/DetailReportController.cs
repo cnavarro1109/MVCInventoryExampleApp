@@ -19,5 +19,12 @@ namespace InventoryApp.Controllers
 
             return View();
         }
+
+        public ActionResult EmployeeReport()
+        {
+            var DataSource = db.Employees.ToList();
+            ViewBag.datasource = DataSource;
+            return View();
+        }
     }
 }

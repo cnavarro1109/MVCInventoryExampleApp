@@ -121,7 +121,7 @@ namespace InventoryApp.Controllers
                 {
                     EnableError = true,
                     ErrorTitle = "Error",
-                    ErrorMsg = "Something goes wrong, please try again later"
+                    ErrorMsg = "Something went wrong, please try again later"
                 });
             }
 

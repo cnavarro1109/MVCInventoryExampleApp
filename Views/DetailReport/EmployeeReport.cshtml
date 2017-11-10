@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "EmployeeReport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EmployeeReport</h2>
+
+
+@(Html.EJ().Grid<object>("FlatGrid")
+
+    .Datasource((IEnumerable<object>)ViewBag.datasource)
+
+    .AllowPaging()
+
+    .AllowFiltering()
+
+    .AllowSorting()
+
+    .FilterSettings(d => d.FilterType(FilterType.FilterBar))
+
+    .Columns(col =>
+
+    {
+
+        col.Field("FirstName").HeaderText("First Name").TextAlign(TextAlign.Right).Width(75).Add();
+
+        col.Field("LastName").HeaderText("Last Name").Width(80).Add();
+
+        col.Field("IsActive").HeaderText("Is Active").Width(100).Add();
+
+
+    })
+
+)
+

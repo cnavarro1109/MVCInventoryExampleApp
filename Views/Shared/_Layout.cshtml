@@ -7,6 +7,9 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
     @Styles.Render("~/Content/themes/base/css")
+
+    <link href="@Url.Content("~/Content/ej/web/default-theme/ej.web.all.min.css")" rel="stylesheet" />
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -43,6 +46,18 @@
     @Scripts.Render("~/bundles/jqueryval")
     @Scripts.Render("~/bundles/jqueryui")
     @Scripts.Render("~/bundles/bootstrap")
+
+
     @RenderSection("scripts", required: false)
+
+
+    <script src="@Url.Content("~/Scripts/jsrender.min.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/ej/web/ej.web.all.min.js")"></script>
+
+    <script src="@Url.Content("~/Scripts/ej/common/ej.unobtrusive.min.js")"></script>
+
+    @Html.EJ().ScriptManager()
+
 </body>
 </html>
