@@ -10,11 +10,8 @@
           .Datasource((IEnumerable<object>)ViewBag.datasourceStores)
           .DetailsTemplate("#tabGridContents")
           .ClientSideEvents(eve => { eve.DetailsDataBound("detailGridData"); })
-          .AllowFiltering()
-          .AllowPaging()
           .Columns(col =>
            {
-               col.Field("Id").Add();
                col.Field("Name").Add();
 
            })
@@ -29,28 +26,32 @@
         </ul>
         <div id="gridTab{{:Id }}">
             <div id="detailGrid">
+                
             </div>
         </div>
     </div>
 </script>
-<script src="~/Scripts/jsondata.min.js"></script>
+
+
 <script type="text/javascript">
     function detailGridData(e) {
 
         var dataSource = @Html.Raw(Json.Encode(@ViewBag.datasourceInventory));
         var filteredData = e.rowData["Id"];
-        console.log(dataSource);
+ 
 
         // the datasource "window.ordersView" is referred from jsondata.min.js
         var data = ej.DataManager(dataSource).executeLocal(ej.Query().where("Store_Id", "equal", parseInt(filteredData), true).take(5));
+
         e.detailsElement.find("#detailGrid").ejGrid({
             dataSource: data,
             columns: [
-                { field: "Store_Id" },
                 { field: "Name" },
-                { field: "Description"}
+                { field: "Description" },
+                { field: "Price" }
             ]
         });
+
         e.detailsElement.find(".tabcontrol").ejTab();
     }
 </script>

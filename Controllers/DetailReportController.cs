@@ -29,18 +29,24 @@ namespace InventoryApp.Controllers
 
         public ActionResult InventoryPerStore()
         {
+            //This is the initial Grid
             var DataSourceStores = db.Stores.ToList();
 
-            var DataSourceInventory = from Inventory in db.Inventories
+            //This is the details view - Hold the inventory per store
+            var DataSourceInventory = (from Inventory in db.Inventories
                                       select new
                                       {
                                           Store_Id = Inventory.Stores.Id,
                                           Name = Inventory.Name,
-                                          Description = Inventory.Description
-                                      };
+                                          Description = Inventory.Description,
+                                          Price = Inventory.Price
+                                      }).ToList();
 
-            ViewBag.datasourceStores = DataSourceStores;
-            ViewBag.datasourceInventory = DataSourceInventory.ToList();
+            //Used to populate any controller when called from the view
+
+            ViewBag.datasourceStores = DataSourceStores; //For the parent Grid
+
+            ViewBag.datasourceInventory = DataSourceInventory; //For the Details/Child Grid
 
             return View();
 
