@@ -112,3 +112,4 @@ C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryAp
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\Syncfusion.Presentation.Base.xml
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\bin\Syncfusion.XlsIO.Base.xml
 C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.csprojResolveAssemblyReference.cache
+C:\Users\cnavarro\documents\visual studio 2017\Projects\InventoryApp\InventoryApp\obj\Debug\InventoryApp.Migrations.AddingSchedulerModel.resources

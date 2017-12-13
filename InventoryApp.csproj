@@ -190,6 +190,7 @@
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InventoriesController.cs" />
+    <Compile Include="Controllers\SchedulerController.cs" />
     <Compile Include="Controllers\StoreManagementController.cs" />
     <Compile Include="Controllers\StoresController.cs" />
     <Compile Include="Data\InventoryContext.cs" />
@@ -260,9 +261,14 @@
     <Compile Include="Migrations\201711080213445_AddingForeignKeyToStoreTable.Designer.cs">
       <DependentUpon>201711080213445_AddingForeignKeyToStoreTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712131748251_Adding Scheduler Model.cs" />
+    <Compile Include="Migrations\201712131748251_Adding Scheduler Model.Designer.cs">
+      <DependentUpon>201712131748251_Adding Scheduler Model.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\Inventory.cs" />
+    <Compile Include="Models\Scheduler.cs" />
     <Compile Include="Models\Store.cs" />
     <Compile Include="Models\StoreCategory.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -938,6 +944,7 @@
     <Content Include="Views\DetailReport\Index.cshtml" />
     <Content Include="Views\DetailReport\EmployeeReport.cshtml" />
     <Content Include="Views\DetailReport\InventoryPerStore.cshtml" />
+    <Content Include="Views\Scheduler\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -993,6 +1000,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201711080213445_AddingForeignKeyToStoreTable.resx">
       <DependentUpon>201711080213445_AddingForeignKeyToStoreTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712131748251_Adding Scheduler Model.resx">
+      <DependentUpon>201712131748251_Adding Scheduler Model.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

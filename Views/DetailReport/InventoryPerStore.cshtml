@@ -10,6 +10,7 @@
           .Datasource((IEnumerable<object>)ViewBag.datasourceStores)
           .DetailsTemplate("#tabGridContents")
           .ClientSideEvents(eve => { eve.DetailsDataBound("detailGridData"); })
+          .AllowPaging()
           .Columns(col =>
            {
                col.Field("Name").Add();
@@ -18,6 +19,11 @@
 )
 
 @section Scripts {
+
+
+<script>
+    console.log("Hello, I'm talking to the console!");
+</script>
    
 <script id="tabGridContents" type="text/x-jsrender">
     <div class="tabcontrol" id="Test">
@@ -36,9 +42,12 @@
 <script type="text/javascript">
     function detailGridData(e) {
 
+        
+
         var dataSource = @Html.Raw(Json.Encode(@ViewBag.datasourceInventory));
         var filteredData = e.rowData["Id"];
- 
+
+        console.log("Hey, A row was clicked! Row ID IS: " + e.rowData["Id"]);
 
         // the datasource "window.ordersView" is referred from jsondata.min.js
         var data = ej.DataManager(dataSource).executeLocal(ej.Query().where("Store_Id", "equal", parseInt(filteredData), true).take(5));
